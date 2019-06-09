@@ -46,20 +46,18 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  message = []
+  newhash = []
      holiday_hash.each do |key, value|
          puts "#{key.capitalize}:"
-         value.each do |hld, thing|
-             hld.to_s
-             puts "  #{hld.to_s.split("_").map(&:capitalize).join(" ")}: #{thing.join(", ")}"
+         value.each do |sk, thing|
+             sk.to_s
+             puts "  #{sk.to_s.split("_").map(&:capitalize).join(" ")}: #{thing.join(", ")}"
          end
      end
-     # puts message
+     # puts newhash
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
 list = []
      holiday_hash.each do|key, value|
          value.each do |key, name|
