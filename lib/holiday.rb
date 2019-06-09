@@ -55,6 +55,8 @@ def all_supplies_in_holidays(holiday_hash)
              puts "#{sk.to_s.split("_").map(&:capitalize).join(" ")}: #{thing.join(", ")}"
          end
   end
+  puts newhash
+  
   all_supplies_in_holidays(holiday_hash)
 end
 
