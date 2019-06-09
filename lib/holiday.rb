@@ -46,15 +46,16 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  
-  newhash = []
+  message = []
      holiday_hash.each do |key, value|
          puts "#{key.capitalize}:"
-         value.each do |sk, thing|
-             sk.to_s
-             puts "#{sk.to_s.split("_").map(&:capitalize).join(" ")}: #{thing.join(", ")}"
+         value.each do |hld, thing|
+             hld.to_s
+             puts "  #{hld.to_s.split("_").map(&:capitalize).join(" ")}: #{thing.join(", ")}"
          end
-       end
+     end
+     # puts message
+     
     
 end
 
