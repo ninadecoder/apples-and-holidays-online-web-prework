@@ -54,16 +54,22 @@ def all_supplies_in_holidays(holiday_hash)
              sk.to_s
              puts "#{sk.to_s.split("_").map(&:capitalize).join(" ")}: #{thing.join(", ")}"
          end
-     end
-   puts newhash
-  end
-  all_supplies_in_holidays(holiday_hash)
+       end
+    
 end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-
+list = []
+     holiday_hash.each do|key, value|
+         value.each do |key, name|
+             name.each do |thing|
+                 list << key if thing == "BBQ"
+             end
+         end
+     end
+     list
 end
 
 
